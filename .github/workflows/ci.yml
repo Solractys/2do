@@ -1,0 +1,26 @@
+name: Verificações
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality:
+    name: Formatação, qualidade e testes
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar o código
+        uses: actions/checkout@v4
+      - name: Instalar Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - name: Verificar formatação
+        run: cargo fmt --check
+      - name: Analisar o código
+        run: cargo clippy -- -D warnings
+      - name: Executar testes
+        run: cargo test
+

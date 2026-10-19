@@ -33,3 +33,11 @@ Depois, execute:
 
 As tarefas são salvas automaticamente em `~/.local/share/2do/tasks.json`.
 Para escolher outro arquivo, defina a variável `TODO_TUI_DATA`.
+
+## Contribuindo
+
+Ideias, correções e melhorias são bem-vindas. Veja o [guia de contribuição](CONTRIBUTING.md) para começar.
+
+## Licença
+
+Distribuído sob a licença [MIT](LICENSE).

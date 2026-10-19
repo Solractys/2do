@@ -1,0 +1,50 @@
+name: Relatar um problema
+description: Conte o que deu errado ao usar o 2do
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Obrigado por ajudar a melhorar o 2do!
+  - type: textarea
+    id: problem
+    attributes:
+      label: O que aconteceu?
+      description: Explique o problema de forma simples.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Como reproduzir?
+      description: Liste os passos que fazem o problema aparecer.
+      placeholder: |
+        1. Executei `2do`
+        2. Pressionei...
+        3. O problema apareceu
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: O que você esperava?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Versão do 2do
+      placeholder: "Exemplo: 0.1.0"
+  - type: input
+    id: environment
+    attributes:
+      label: Sistema e terminal
+      placeholder: "Exemplo: Ubuntu 24.04, Kitty"
+    validations:
+      required: true
+  - type: textarea
+    id: extra
+    attributes:
+      label: Informações adicionais
+      description: Logs, imagens ou outros detalhes úteis.
+

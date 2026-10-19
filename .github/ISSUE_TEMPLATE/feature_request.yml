@@ -1,0 +1,37 @@
+name: Sugerir uma melhoria
+description: Compartilhe uma ideia para o 2do
+title: "[Ideia]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: Toda ideia é bem-vinda. Obrigado por participar!
+  - type: textarea
+    id: need
+    attributes:
+      label: Qual necessidade você encontrou?
+      description: Conte primeiro o problema que deseja resolver.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Como você imagina a solução?
+      description: Não precisa conhecer detalhes técnicos.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Você considerou outra solução?
+  - type: dropdown
+    id: contribution
+    attributes:
+      label: Você gostaria de implementar essa ideia?
+      options:
+        - Sim
+        - Talvez, com orientação
+        - Não neste momento
+    validations:
+      required: true
+
